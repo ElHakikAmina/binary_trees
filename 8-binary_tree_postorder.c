@@ -1,16 +1,20 @@
 #include "binary_trees.h"
-
 /**
- * binarytreepositiontorder - goes through a binary tree using post-order traverse
- * @tree: tree to traverse
- * @func: pointer to a function to call for each node
+ * binary_tree_postorder - print elements of tree using post-order traversal
+ * @tree: tree to go through
+ * @func: function to use
+ * Return: Nothing
  */
-void binarytreepositiontorder(const binarytreet *tree, void (*func)(int))
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
-	if (!tree || !func)
+	if (tree == NULL || func == NULL)
+	{
 		return;
-
-	binarytreepositiontorder(tree->l, func);
-	binarytreepositiontorder(tree->r, func);
+	}
+	else
+	{
+		binary_tree_postorder(tree->left, func);
+		binary_tree_postorder(tree->right, func);
+	}
 	func(tree->n);
 }

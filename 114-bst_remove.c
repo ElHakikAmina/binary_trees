@@ -1,12 +1,12 @@
 #include "binary_trees.h"
 /**
- * successor - get the next successor i mean the min node in the r subtree
+ * successor - get the next successor i mean the min node in the right subtree
  * @node: tree to check
  * Return: the min value of this tree
  */
-int successor(bstt *node)
+int successor(bst_t *node)
 {
-	int l = 0;
+	int left = 0;
 
 	if (node == NULL)
 	{
@@ -14,27 +14,27 @@ int successor(bstt *node)
 	}
 	else
 	{
-		l = successor(node->l);
-		if (l == 0)
+		left = successor(node->left);
+		if (left == 0)
 		{
 			return (node->n);
 		}
-		return (l);
+		return (left);
 	}
 
 }
 /**
  * two_children - function that gets the next successor using the min
- * value in the r subtree, and then replace the node value for
+ * value in the right subtree, and then replace the node value for
  * this successor
  * @root: node tat has two children
  * Return: the value found
  */
-int two_children(bstt *root)
+int two_children(bst_t *root)
 {
 	int new_value = 0;
 
-	new_value = successor(root->r);
+	new_value = successor(root->right);
 	root->n = new_value;
 	return (new_value);
 }
@@ -43,34 +43,34 @@ int two_children(bstt *root)
  *@root: node to remove
  *Return: 0 if it has no children or other value if it has
  */
-int remove_type(bstt *root)
+int remove_type(bst_t *root)
 {
-	if (!root->l && !root->r)
+	if (!root->left && !root->right)
 	{
-		if (root->prnt->r == root)
-			root->prnt->r = NULL;
+		if (root->parent->right == root)
+			root->parent->right = NULL;
 		else
-			root->prnt->l = NULL;
+			root->parent->left = NULL;
 		free(root);
 		return (0);
 	}
-	else if ((!root->l && root->r) || (!root->r && root->l))
+	else if ((!root->left && root->right) || (!root->right && root->left))
 	{
-		if (!root->l)
+		if (!root->left)
 		{
-			if (root->prnt->r == root)
-				root->prnt->r = root->r;
+			if (root->parent->right == root)
+				root->parent->right = root->right;
 			else
-				root->prnt->l = root->r;
-			root->r->prnt = root->prnt;
+				root->parent->left = root->right;
+			root->right->parent = root->parent;
 		}
-		if (!root->r)
+		if (!root->right)
 		{
-			if (root->prnt->r == root)
-				root->prnt->r = root->l;
+			if (root->parent->right == root)
+				root->parent->right = root->left;
 			else
-				root->prnt->l = root->l;
-			root->l->prnt = root->prnt;
+				root->parent->left = root->left;
+			root->left->parent = root->parent;
 		}
 		free(root);
 		return (0);
@@ -84,21 +84,21 @@ int remove_type(bstt *root)
  * @value: node with this value to remove
  * Return: the tree changed
  */
-bstt *bst_remove(bstt *root, int value)
+bst_t *bst_remove(bst_t *root, int value)
 {
 	int type = 0;
 
 	if (root == NULL)
 		return (NULL);
 	if (value < root->n)
-		bst_remove(root->l, value);
+		bst_remove(root->left, value);
 	else if (value > root->n)
-		bst_remove(root->r, value);
+		bst_remove(root->right, value);
 	else if (value == root->n)
 	{
 		type = remove_type(root);
 		if (type != 0)
-			bst_remove(root->r, type);
+			bst_remove(root->right, type);
 	}
 	else
 		return (NULL);

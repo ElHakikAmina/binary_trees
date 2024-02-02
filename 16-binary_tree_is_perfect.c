@@ -1,81 +1,52 @@
 #include "binary_trees.h"
-
 /**
- * binary_tree_is_perfect - checks if a binary tree is perfect
- * @tree: a pointer to the root node of the tree to check
- *
- * Return: 1 if the tree is perfect
- *         0 if the tree is not perfect
- *         0 if tree is NULL
+ * tree_is_perfect - function that says if a tree is perfect or not
+ * it has to be the same quantity of levels in left as right, and also
+ * each node has to have 2 nodes or none
+ * @tree: tree to check
+ * Return: 0 if is not a perfect or other number that is the level of height
  */
-int binary_tree_is_perfect(const binarytreet *tree)
+int tree_is_perfect(const binary_tree_t *tree)
 {
-	size_t height = 0;
-	size_t nodes = 0;
-	size_t power = 0;
+	int l = 0, r = 0;
 
-	if (!tree)
+	if (tree->left && tree->right)
+	{
+		l = 1 + tree_is_perfect(tree->left);
+		r = 1 + tree_is_perfect(tree->right);
+		if (r == l && r != 0 && l != 0)
+			return (r);
 		return (0);
-
-	if (!tree->r && !tree->l)
+	}
+	else if (!tree->left && !tree->right)
+	{
 		return (1);
-
-	height = binarytreeheight(tree);
-	nodes = binarytreeize(tree);
-
-	power = (size_t)_pow_recursion(2, height + 1);
-	return (power - 1 == nodes);
-}
-
-/**
- *_pow_recursion - returns the value of x raised to the power of y
- *@x: the value to exponentiate
- *@y: the power to raise x to
- *Return: x to the power of y, or -1 if y is negative
- */
-
-int _pow_recursion(int x, int y)
-{
-	if (y < 0)
-		return (-1);
-	if (y == 0)
-		return (1);
+	}
 	else
-		return (x * _pow_recursion(x, y - 1));
-
-}
-
-/**
- * binarytreeize - measures the size of a binary tree
- * @tree: tree to measure the size of
- *
- * Return: size of the tree
- *         0 if tree is NULL
- */
-size_t binarytreeize(const binarytreet *tree)
-{
-	if (!tree)
+	{
 		return (0);
-
-	return (binarytreeize(tree->l) + binarytreeize(tree->r) + 1);
+	}
 }
-
 /**
- * binarytreeheight - measures the height of a binary tree
- * @tree: tree to measure the height of
- *
- * Return: height of the tree
- *         0 if tree is NULL
+ * binary_tree_is_perfect - perfect or not a tree
+ * @tree: tree to check
+ * Return: 1 is it is or 0 if not
  */
-size_t binarytreeheight(const binarytreet *tree)
+int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	size_t height_l = 0;
-	size_t height_r = 0;
+	int result = 0;
 
-	if (!tree)
+	if (tree == NULL)
+	{
 		return (0);
-
-	height_l = tree->l ? 1 + binarytreeheight(tree->l) : 0;
-	height_r = tree->r ? 1 + binarytreeheight(tree->r) : 0;
-	return (height_l > height_r ? height_l : height_r);
+	}
+	else
+	{
+		result = tree_is_perfect(tree);
+		if (result != 0)
+		{
+			return (1);
+		}
+		return (0);
+	}
 }

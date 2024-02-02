@@ -1,48 +1,49 @@
 #include "binary_trees.h"
-
 /**
- * bst_insert - inserts a value in a Binary Search Tree
- * @tree: a double pointer to the root node of the BST to insert the value
- * @value: the value to store in the node to be inserted
- * Return: A pointer to the created node
- *         NULL on failure
+ * bst_insert - insert nodes in order to create a BST tree
+ * @tree: tree to create with type BST
+ * @value: value of node to insert
+ * Return: BST tree
  */
-bstt *bst_insert(bstt **tree, int value)
+bst_t *bst_insert(bst_t **tree, int value)
 {
-	bstt *tmp = NULL;
-	bstt *second = NULL;
-	bstt *new = NULL;
+	bst_t *new, *temp;
+	binary_tree_t *aux;
 
-	if (!tree)
+	if (tree == NULL)
 		return (NULL);
+
 	if (*tree == NULL)
-		return (*tree = binarytreende(NULL, value));
-
-	tmp = *tree;
-	while (tmp)
 	{
-		second = tmp;
-		if (value < tmp->n)
-			tmp = tmp->l;
-		else if (value > tmp->n)
-			tmp = tmp->r;
-		else if (value == tmp->n)
-			return (NULL);
-	}
-
-	new = binarytreende(NULL, value);
-	if (second == NULL)
-		second = new;
-	else if (value < second->n)
-	{
-		second->l = new;
-		new->prnt = second;
+		aux = binary_tree_node((binary_tree_t *)(*tree), value);
+		new = (bst_t *)aux;
+		*tree = new;
 	}
 	else
 	{
-		second->r = new;
-		new->prnt = second;
+		temp = *tree;
+		if (value < temp->n)
+		{
+			if (temp->left)
+				new = bst_insert(&temp->left, value);
+			else
+			{
+				aux = binary_tree_node((binary_tree_t *)temp, value);
+				new = temp->left = (bst_t *)aux;
+			}
+		}
+		else if (value > temp->n)
+		{
+			if (temp->right)
+				new = bst_insert(&temp->right, value);
+			else
+			{
+				aux = binary_tree_node((binary_tree_t *)temp, value);
+				new = temp->right = aux;
+			}
+		}
+		else
+			return (NULL);
 	}
-
 	return (new);
 }
