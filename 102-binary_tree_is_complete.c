@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
- * newnd - Function that creates a newnd in a linked_list
- * @node: Type pointer of node to be created
- * Return: the node created
+ * newnd - Funct creates a newnd in a linked list
+ * @node: Type pointer 
+ * Return: Node created
  */
 link_t *newnd(binary_tree_t *node)
 {
