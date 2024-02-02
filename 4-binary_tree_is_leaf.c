@@ -2,7 +2,7 @@
 /**
  * binary_tree_is_leaf - if a node is leaf, it means the node
  * doesnt have a child in left or right
- * @node: node to study
+ * @node: node for the study
  * Return: 1 if is a leaf and 0 if not
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
