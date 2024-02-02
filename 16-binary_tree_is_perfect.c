@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 /**
  * tree_is_perfect - func it says  tree is perfect or no
- * it has be the same quantity of levels in left as right, and also
+ * it has be the same quantity of levels in left as right
  * node have 2 nodes or none
- * @tree: tree to check
- * Return: 0 if is not a perfect or other number that is the level of height
+ * @tree: tree that will check
+ * Return: 0 not a perfect or other number that  of height
  */
 int tree_is_perfect(const binary_tree_t *tree)
 {
