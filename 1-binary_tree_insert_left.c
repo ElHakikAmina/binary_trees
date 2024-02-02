@@ -11,15 +11,11 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	binary_tree_t *newnd;
 
 	if (parent == NULL)
-	{
 		return (NULL);
-	}
 
 	newnd = binary_tree_node(parent, value);
 	if (newnd == NULL)
-	{
 		return (NULL);
-	}
 	if (parent->left != NULL)
 	{
 		newnd->left = parent->left;
