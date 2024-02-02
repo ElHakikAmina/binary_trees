@@ -44,7 +44,7 @@ int binarytreeroot(const binarytreet *node);
 void binarytreepre_order(const binarytreet *tree, void (*func)(int));
 void binarytreein_order(const binarytreet *tree, void (*func)(int));
 void binarytreepositiontorder(const binarytreet *tree, void (*func)(int));
-size_t binary_tree_height(const binarytreet *tree);
+size_t binarytreeheight(const binarytreet *tree);
 size_t binary_tree_depth(const binarytreet *tree);
 size_t binarytreeize(const binarytreet *tree);
 size_t binary_tree_leaves(const binarytreet *tree);

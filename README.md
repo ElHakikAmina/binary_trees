@@ -31,7 +31,7 @@ Files | Description
 [6-binarytreepre_order.c](./6-binarytreepre_order.c) | C function that goes through a binary tree using pre-order traversal
 [7-binarytreein_order.c](./7-binarytreein_order.c) | C function that goes through a binary tree using in-order traversal
 [8-binarytreepositiontorder.c](./8-binarytreepositiontorder.c) | C function that goes through a binary tree using post-order traversal
-[9-binary_tree_height.c](./9-binary_tree_height.c) | C function that measures the height of a binary tree
+[9-binarytreeheight.c](./9-binarytreeheight.c) | C function that measures the height of a binary tree
 [10-binary_tree_depth.c](./10-binary_tree_depth.c) | C function that measures the depth of a node in a binary tree
 [11-binarytreeize.c](./11-binarytreeize.c) | C function that measures the size of a binary tree
 [12-binary_tree_leaves.c](./12-binary_tree_leaves.c) | C function that counts the leaves in a binary tree
