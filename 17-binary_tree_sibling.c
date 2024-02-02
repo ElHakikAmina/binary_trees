@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_sibling - function that finds if a node is sibling
- * @node: node to check
- * Return: The sibling node
+ * binary_tree_sibling - func finds if a node is sibling
+ * @node: node that will check
+ * Return: Sibling node
  */
 
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
