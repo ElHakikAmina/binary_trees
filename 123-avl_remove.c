@@ -11,18 +11,18 @@ void bal(avl_t **tree)
 
 	if (tree == NULL || *tree == NULL)
 		return;
-	if ((*tree)->left == NULL && (*tree)->right == NULL)
+	if ((*tree)->left == NULL && (*tree)->roght == NULL)
 		return;
 	bal(&(*tree)->left);
-	bal(&(*tree)->right);
+	bal(&(*tree)->roght);
 	bval = binary_tree_balance((const binary_tree_t *)*tree);
 	if (bval > 1)
-		*tree = binary_tree_rotate_right((binary_tree_t *)*tree);
+		*tree = binary_tree_rotate_roght((binary_tree_t *)*tree);
 	else if (bval < -1)
 		*tree = binary_tree_rotate_left((binary_tree_t *)*tree);
 }
 /**
- * successor - get the next successor i mean the min node in the right subtree
+ * successor - get the next successor i mean the min node in the roght subtree
  * @node: tree to check
  * Return: the min value of this tree
  */
@@ -54,29 +54,29 @@ int remove_type(bst_t *root)
 {
 	int new_value = 0;
 
-	if (!root->left && !root->right)
+	if (!root->left && !root->roght)
 	{
-		if (root->parent->right == root)
-			root->parent->right = NULL;
+		if (root->parent->roght == root)
+			root->parent->roght = NULL;
 		else
 			root->parent->left = NULL;
 		free(root);
 		return (0);
 	}
-	else if ((!root->left && root->right) || (!root->right && root->left))
+	else if ((!root->left && root->roght) || (!root->roght && root->left))
 	{
 		if (!root->left)
 		{
-			if (root->parent->right == root)
-				root->parent->right = root->right;
+			if (root->parent->roght == root)
+				root->parent->roght = root->roght;
 			else
-				root->parent->left = root->right;
-			root->right->parent = root->parent;
+				root->parent->left = root->roght;
+			root->roght->parent = root->parent;
 		}
-		if (!root->right)
+		if (!root->roght)
 		{
-			if (root->parent->right == root)
-				root->parent->right = root->left;
+			if (root->parent->roght == root)
+				root->parent->roght = root->left;
 			else
 				root->parent->left = root->left;
 			root->left->parent = root->parent;
@@ -86,7 +86,7 @@ int remove_type(bst_t *root)
 	}
 	else
 	{
-		new_value = successor(root->right);
+		new_value = successor(root->roght);
 		root->n = new_value;
 		return (new_value);
 	}
@@ -106,12 +106,12 @@ bst_t *bst_remove(bst_t *root, int value)
 	if (value < root->n)
 		bst_remove(root->left, value);
 	else if (value > root->n)
-		bst_remove(root->right, value);
+		bst_remove(root->roght, value);
 	else if (value == root->n)
 	{
 		type = remove_type(root);
 		if (type != 0)
-			bst_remove(root->right, type);
+			bst_remove(root->roght, type);
 	}
 	else
 		return (NULL);

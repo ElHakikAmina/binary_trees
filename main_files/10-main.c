@@ -14,16 +14,16 @@ int main(void)
 
 	root = binary_tree_node(NULL, 98);
 	root->left = binary_tree_node(root, 12);
-	root->right = binary_tree_node(root, 402);
-	binary_tree_insert_right(root->left, 54);
-	binary_tree_insert_right(root, 128);
+	root->roght = binary_tree_node(root, 402);
+	binary_tree_insert_roght(root->left, 54);
+	binary_tree_insert_roght(root, 128);
 	binary_tree_print(root);
 
 	depth = binary_tree_depth(root);
 	printf("Depth of %d: %lu\n", root->n, depth);
-	depth = binary_tree_depth(root->right);
-	printf("Depth of %d: %lu\n", root->right->n, depth);
-	depth = binary_tree_depth(root->left->right);
-	printf("Depth of %d: %lu\n", root->left->right->n, depth);
+	depth = binary_tree_depth(root->roght);
+	printf("Depth of %d: %lu\n", root->roght->n, depth);
+	depth = binary_tree_depth(root->left->roght);
+	printf("Depth of %d: %lu\n", root->left->roght->n, depth);
 	return (0);
 }

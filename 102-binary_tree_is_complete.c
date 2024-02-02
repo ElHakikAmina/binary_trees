@@ -96,14 +96,14 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 		}
 		else
 			flag = 1;
-		if (head->node->right != NULL)
+		if (head->node->roght != NULL)
 		{
 			if (flag == 1)
 			{
 				free_q(head);
 				return (0);
 			}
-			_push(head->node->right, head, &tail);
+			_push(head->node->roght, head, &tail);
 		}
 		else
 			flag = 1;

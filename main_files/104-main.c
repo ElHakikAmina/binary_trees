@@ -15,16 +15,16 @@ int main(void)
   root->left = binary_tree_node(root, 64);
   root->left->left = binary_tree_node(root->left, 32);
   binary_tree_print(root);
-  printf("Rotate-right %d\n", root->n);
-  root = binary_tree_rotate_right(root);
+  printf("Rotate-roght %d\n", root->n);
+  root = binary_tree_rotate_roght(root);
   binary_tree_print(root);
   printf("\n");
 
   root->left->left = binary_tree_node(root->left, 20);
-  root->left->right = binary_tree_node(root->left, 56);
+  root->left->roght = binary_tree_node(root->left, 56);
   binary_tree_print(root);
-  printf("Rotate-right %d\n", root->n);
-  root = binary_tree_rotate_right(root);
+  printf("Rotate-roght %d\n", root->n);
+  root = binary_tree_rotate_roght(root);
   binary_tree_print(root);
   return (0);
 }

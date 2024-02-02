@@ -15,7 +15,7 @@ At the end of this project, We were able to undesrtand these questions:
 
 0. Function that creates a binary tree node
 1. Function that inserts a node as the left-child of another node
-2. Function that inserts a node as the right-child of another node
+2. Function that inserts a node as the roght-child of another node
 3. Function that deletes an entire binary tree
 4. Function that checks if a node is a leaf
 5. Function that checks if a given node is a root
@@ -36,7 +36,7 @@ At the end of this project, We were able to undesrtand these questions:
 20. Function that goes through a binary tree using level-order traversal
 21. Function that checks if a binary tree is complete
 22. Function that performs a left-rotation on a binary tree
-23. Function that performs a right-rotation on a binary tree
+23. Function that performs a roght-rotation on a binary tree
 24. Function that checks if a binary tree is a valid Binary Search Tree
 25. Function that inserts a value in a Binary Search Tree
 26. Function that builds a Binary Search Tree from an array
@@ -63,7 +63,7 @@ At the end of this project, We were able to undesrtand these questions:
 | ------ |
 | [0-binary_tree_node.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/0-binary_tree_node.c)|
 | [1-binary_tree_insert_left.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/1-binary_tree_insert_left.c)|
-| [2-binary_tree_insert_right.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/2-binary_tree_insert_right.c)|
+| [2-binary_tree_insert_roght.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/2-binary_tree_insert_roght.c)|
 | [3-binary_tree_delete.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/3-binary_tree_delete.c)|
 | [4-binary_tree_is_leaf.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/4-binary_tree_is_leaf.c)|
 | [5-binary_tree_is_root.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/5-binary_tree_is_root.c)|
@@ -84,7 +84,7 @@ At the end of this project, We were able to undesrtand these questions:
 | [101-binary_tree_levelorder.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/101-binary_tree_levelorder.c)|
 | [102-binary_tree_is_complete.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/102-binary_tree_is_complete.c)|
 | [103-binary_tree_rotate_left.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/103-binary_tree_rotate_left.c)|
-| [104-binary_tree_rotate_right.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/104-binary_tree_rotate_right.c)|
+| [104-binary_tree_rotate_roght.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/104-binary_tree_rotate_roght.c)|
 | [110-binary_tree_is_bst.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/110-binary_tree_is_bst.c)|
 | [111-bst_insert.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/111-bst_insert.c)|
 | [112-array_to_bst.c](https://github.com/edward0rtiz/0x1D-binary_trees/blob/master/112-array_to_bst.c)|

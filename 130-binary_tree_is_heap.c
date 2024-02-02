@@ -17,12 +17,12 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	}
 	else
 	{
-		if (tree->left == NULL && tree->right == NULL)
+		if (tree->left == NULL && tree->roght == NULL)
 			return (tree->parent != NULL);
 		if (tree)
 		{
 			l = tree->left ? 1 + binary_tree_height(tree->left) : 0;
-			r = tree->right ? 1 + binary_tree_height(tree->right) : 0;
+			r = tree->roght ? 1 + binary_tree_height(tree->roght) : 0;
 		}
 		return ((l > r) ? l : r);
 		}
@@ -35,20 +35,20 @@ size_t binary_tree_height(const binary_tree_t *tree)
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int right = 0, left = 0, total = 0;
+	int roght = 0, left = 0, total = 0;
 
 	if (tree)
 	{
 		left = ((int)binary_tree_height(tree->left));
-		right = ((int)binary_tree_height(tree->right));
-		total = left - right;
+		roght = ((int)binary_tree_height(tree->roght));
+		total = left - roght;
 	}
 	return (total);
 }
 
 /**
  * tree_is_perfect - function that says if a tree is perfect or not
- * it has to be the same quantity of levels in left as right, and also
+ * it has to be the same quantity of levels in left as roght, and also
  * each node has to have 2 nodes or none
  * @tree: tree to check
  * Return: 0 if is not a perfect or other number that is the level of height
@@ -57,15 +57,15 @@ int tree_is_perfect(const binary_tree_t *tree)
 {
 	int l = 0, r = 0;
 
-	if (tree->left && tree->right)
+	if (tree->left && tree->roght)
 	{
 		l = 1 + tree_is_perfect(tree->left);
-		r = 1 + tree_is_perfect(tree->right);
+		r = 1 + tree_is_perfect(tree->roght);
 		if (r == l && r != 0 && l != 0)
 			return (r);
 		return (0);
 	}
-	else if (!tree->left && !tree->right)
+	else if (!tree->left && !tree->roght)
 	{
 		return (1);
 	}
@@ -116,7 +116,7 @@ int binary_tree_is_heap(const binary_tree_t *tree)
 	{
 		return (0);
 	}
-	if (tree->right && tree->right->n > tree->n)
+	if (tree->roght && tree->roght->n > tree->n)
 	{
 		return (0);
 	}
@@ -128,12 +128,12 @@ int binary_tree_is_heap(const binary_tree_t *tree)
 	if (bval == 0)
 	{
 		return (binary_tree_is_perfect(tree->left)
-			&& binary_tree_is_heap(tree->right));
+			&& binary_tree_is_heap(tree->roght));
 	}
 	if (bval == 1)
 	{
 		return (binary_tree_is_heap(tree->left)
-			&& binary_tree_is_perfect(tree->right));
+			&& binary_tree_is_perfect(tree->roght));
 	}
 	else
 	{

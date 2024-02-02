@@ -21,7 +21,7 @@ avl_t *aux_sort(avl_t *parent, int *array, int begin, int last)
 			return (NULL);
 		root = (avl_t *)aux;
 		root->left = aux_sort(root, array, begin, mid - 1);
-		root->right = aux_sort(root, array, mid + 1, last);
+		root->roght = aux_sort(root, array, mid + 1, last);
 		return (root);
 	}
 	return (NULL);
