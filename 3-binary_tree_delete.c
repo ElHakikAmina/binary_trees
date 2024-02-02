@@ -3,7 +3,7 @@
  * binary_tree_delete - free an entire tree using recursion it free the node
  * when the node left and right are NULL
  * @tree: free tree
- * Return: Nothing
+ * Return: none
  */
 void binary_tree_delete(binary_tree_t *tree)
 {
