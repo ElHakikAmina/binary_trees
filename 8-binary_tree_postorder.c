@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 /**
- * binary_tree_postorder - print elements of tree using post-order traversal
- * @tree: tree to go through
- * @func: function to use
- * Return: Nothing
+ * binary_tree_postorder - print tree elements with post-order traversal
+ * @tree: go through
+ * @func: to use
+ * Return: None
  */
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
