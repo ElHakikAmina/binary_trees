@@ -3,7 +3,7 @@
 /**
  * binary_tree_rotate_right - Funct rotates right the binary tree.
  * @tree: root node of the three
- * Return: Pointer node 
+ * Return: Pointer node of the new node
  */
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
 {
