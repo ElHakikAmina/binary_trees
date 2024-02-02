@@ -9,14 +9,14 @@
  *         NULL on failure
  *         NULL if prnt is NULL
  */
-binary_tree_t *binary_tree_insert_l(binary_tree_t *prnt, int value)
+binarytreet *binary_tree_insert_l(binarytreet *prnt, int value)
 {
-	binary_tree_t *new;
+	binarytreet *new;
 
 	if (!prnt)
 		return (NULL);
 
-	new = malloc(sizeof(binary_tree_t));
+	new = malloc(sizeof(binarytreet));
 	if (!new)
 		return (NULL);
 

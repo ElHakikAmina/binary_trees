@@ -30,7 +30,7 @@ void print_array(const int *array, size_t size)
  */
 int main(void)
 {
-    heap_t *tree;
+    heapt *tree;
     int array[] = {
         79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
         20, 22, 98, 1, 62, 95
@@ -44,7 +44,7 @@ int main(void)
     if (!tree)
         return (1);
     binary_tree_print(tree);
-    sorted = heap_to_sorted_array(tree, &sorted_size);
+    sorted = heapto_sorted_array(tree, &sorted_size);
     print_array(sorted, sorted_size);
     free(sorted);
     return (0);

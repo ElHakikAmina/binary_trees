@@ -7,7 +7,7 @@
  * Return: 1 if tree is avl
  *         0 otherwise
  */
-int binary_tree_is_avl(const binary_tree_t *tree)
+int binary_tree_is_avl(const binarytreet *tree)
 {
 	if (!tree)
 		return (0);
@@ -24,7 +24,7 @@ int binary_tree_is_avl(const binary_tree_t *tree)
  * Return: 1 if tree is avl
  *         0 otherwise
  */
-int btia_helper(const binary_tree_t *tree, int min, int max)
+int btia_helper(const binarytreet *tree, int min, int max)
 {
 	int path_l, path_r;
 
@@ -51,7 +51,7 @@ int btia_helper(const binary_tree_t *tree, int min, int max)
  * Return: height of the tree
  *         0 if tree is NULL
  */
-size_t binary_tree_height(const binary_tree_t *tree)
+size_t binary_tree_height(const binarytreet *tree)
 {
 	size_t height_l = 0;
 	size_t height_r = 0;

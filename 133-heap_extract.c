@@ -38,9 +38,9 @@
  * @b: second node
  * Return: pointer to root
  */
-bst_t *swap(bst_t *a, bst_t *b)
+bstt *swap(bstt *a, bstt *b)
 {
-	bst_t a_copy = INIT_NODE;
+	bstt a_copy = INIT_NODE;
 
 	a_copy.n = a->n;
 	a_copy.prnt = a->prnt;
@@ -86,7 +86,7 @@ bst_t *swap(bst_t *a, bst_t *b)
  * @tree: input binary tree
  * Return: number of descendant child nodes
  */
-size_t binarytreeize(const binary_tree_t *tree)
+size_t binarytreeize(const binarytreet *tree)
 {
 	if (!tree)
 		return (0);
@@ -100,7 +100,7 @@ size_t binarytreeize(const binary_tree_t *tree)
  * @node: pointer to node
  * Return: pointer to severed head of tree
  */
-heap_t *swap_head(heap_t *head, heap_t *node)
+heapt *swap_head(heapt *head, heapt *node)
 {
 	if (node->prnt->l == node)
 	{
@@ -122,10 +122,10 @@ heap_t *swap_head(heap_t *head, heap_t *node)
  * @node: pointer to head
  * Return: pointer to head of tree
  */
-heap_t *perc_down(heap_t *node)
+heapt *perc_down(heapt *node)
 {
 	int max;
-	heap_t *next = node;
+	heapt *next = node;
 
 	if (!node)
 		return (NULL);
@@ -151,12 +151,12 @@ heap_t *perc_down(heap_t *node)
  * @root: double pointer to root of tree
  * Return: value stored in the root node
  */
-int heap_extract(heap_t **root)
+int heap_extract(heapt **root)
 {
 	size_t size, i;
 	char *binary, c, buffer[50];
 	int res;
-	heap_t *tmp, *head;
+	heapt *tmp, *head;
 
 	if (!root || !*root)
 		return (0);

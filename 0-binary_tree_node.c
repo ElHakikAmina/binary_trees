@@ -8,9 +8,9 @@
  * Return: Pointer to the newly created node
  *         NULL on failure
  */
-binary_tree_t *binary_tree_node(binary_tree_t *prnt, int value)
+binarytreet *binary_tree_node(binarytreet *prnt, int value)
 {
-	binary_tree_t *new;
+	binarytreet *new;
 
 	new = malloc(sizeof(*new));
 	if (new == NULL)

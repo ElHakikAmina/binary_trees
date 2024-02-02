@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-    heap_t *root;
-    heap_t *node;
+    heapt *root;
+    heapt *node;
 
     root = NULL;
     node = heap_insert(&root, 98);

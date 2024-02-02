@@ -7,7 +7,7 @@
  * Return: 1 if tree is a valid BST
  *         0 otherwise
  */
-int binary_tree_is_bst(const binary_tree_t *tree)
+int binary_tree_is_bst(const binarytreet *tree)
 {
 	if (!tree)
 		return (0);
@@ -23,7 +23,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
  * Return: 1 if tree is a valid BST
  *         0 otherwise
  */
-int btib_helper(const binary_tree_t *tree, int min, int max)
+int btib_helper(const binarytreet *tree, int min, int max)
 {
 	if (!tree)
 		return (1);

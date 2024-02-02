@@ -7,9 +7,9 @@
  * Return: Pointer to the new root node of the tree once rotated
  *         NULL upon failure
  */
-binary_tree_t *binary_tree_rotate_r(binary_tree_t *tree)
+binarytreet *binary_tree_rotate_r(binarytreet *tree)
 {
-	binary_tree_t *tmp = NULL, *prnt;
+	binarytreet *tmp = NULL, *prnt;
 
 	if (!tree || !tree->l)
 		return (NULL);

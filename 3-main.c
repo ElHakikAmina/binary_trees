@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-    binary_tree_t *root;
+    binarytreet *root;
 
     root = binary_tree_node(NULL, 98);
     root->l = binary_tree_node(root, 12);

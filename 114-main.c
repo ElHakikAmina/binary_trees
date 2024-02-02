@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-    bst_t *tree;
+    bstt *tree;
     int array[] = {
         79, 47, 68, 87, 84, 91, 21, 32, 34, 2,
         20, 22, 98, 1, 62, 95

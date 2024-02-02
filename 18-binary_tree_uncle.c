@@ -9,7 +9,7 @@
  *         NULL if the prnt is NULL
  *         NULL if the node has no uncle
  */
-binary_tree_t *binary_tree_uncle(binary_tree_t *node)
+binarytreet *binary_tree_uncle(binarytreet *node)
 {
 	if (!node || !node->prnt)
 		return (NULL);
@@ -26,7 +26,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
  *         NULL if the prnt is NULL
  *         NULL if the node has no siblings
  */
-binary_tree_t *binarytreeibling(binary_tree_t *node)
+binarytreet *binarytreeibling(binarytreet *node)
 {
 	if (!node || !node->prnt)
 		return (NULL);

@@ -26,68 +26,68 @@ struct binarytree
 	struct binarytree *r;
 };
 
-typedef struct binarytree binary_tree_t;
-typedef struct binarytree bst_t;
-typedef struct binarytree avl_t;
-typedef struct binarytree heap_t;
+typedef struct binarytree binarytreet;
+typedef struct binarytree bstt;
+typedef struct binarytree avlt;
+typedef struct binarytree heapt;
 
 /* binary_tree_print.c */
-void binary_tree_print(const binary_tree_t *);
+void binary_tree_print(const binarytreet *);
 
 /* tasks */
-binary_tree_t *binary_tree_node(binary_tree_t *prnt, int value);
-binary_tree_t *binary_tree_insert_l(binary_tree_t *prnt, int value);
-binary_tree_t *binary_tree_insert_r(binary_tree_t *prnt, int value);
-void binary_tree_delete(binary_tree_t *tree);
-int binary_tree_is_leaf(const binary_tree_t *node);
-int binary_tree_is_root(const binary_tree_t *node);
-void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
-void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
-void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
-size_t binary_tree_height(const binary_tree_t *tree);
-size_t binary_tree_depth(const binary_tree_t *tree);
-size_t binarytreeize(const binary_tree_t *tree);
-size_t binary_tree_leaves(const binary_tree_t *tree);
-size_t binary_tree_nodes(const binary_tree_t *tree);
-int binary_tree_balance(const binary_tree_t *tree);
-int binary_tree_is_full(const binary_tree_t *tree);
-int binary_tree_is_perfect(const binary_tree_t *tree);
-binary_tree_t *binarytreeibling(binary_tree_t *node);
-binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+binarytreet *binary_tree_node(binarytreet *prnt, int value);
+binarytreet *binary_tree_insert_l(binarytreet *prnt, int value);
+binarytreet *binary_tree_insert_r(binarytreet *prnt, int value);
+void binary_tree_delete(binarytreet *tree);
+int binary_tree_is_leaf(const binarytreet *node);
+int binary_tree_is_root(const binarytreet *node);
+void binary_tree_preorder(const binarytreet *tree, void (*func)(int));
+void binary_tree_inorder(const binarytreet *tree, void (*func)(int));
+void binary_tree_postorder(const binarytreet *tree, void (*func)(int));
+size_t binary_tree_height(const binarytreet *tree);
+size_t binary_tree_depth(const binarytreet *tree);
+size_t binarytreeize(const binarytreet *tree);
+size_t binary_tree_leaves(const binarytreet *tree);
+size_t binary_tree_nodes(const binarytreet *tree);
+int binary_tree_balance(const binarytreet *tree);
+int binary_tree_is_full(const binarytreet *tree);
+int binary_tree_is_perfect(const binarytreet *tree);
+binarytreet *binarytreeibling(binarytreet *node);
+binarytreet *binary_tree_uncle(binarytreet *node);
 
 /* Advanced tasks */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
-				     const binary_tree_t *second);
-void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
-int binary_tree_is_complete(const binary_tree_t *tree);
-binary_tree_t *binary_tree_rotate_l(binary_tree_t *tree);
-binary_tree_t *binary_tree_rotate_r(binary_tree_t *tree);
-int binary_tree_is_bst(const binary_tree_t *tree);
-bst_t *bst_insert(bst_t **tree, int value);
-bst_t *array_to_bst(int *array, size_t size);
-bst_t *bst_search(const bst_t *tree, int value);
-bst_t *bst_remove(bst_t *root, int value);
-int binary_tree_is_avl(const binary_tree_t *tree);
-avl_t *avl_insert(avl_t **tree, int value);
-avl_t *array_to_avl(int *array, size_t size);
-avl_t *avl_remove(avl_t *root, int value);
-avl_t *sorted_array_to_avl(int *array, size_t size);
-int binary_tree_is_heap(const binary_tree_t *tree);
-heap_t *heap_insert(heap_t **root, int value);
-heap_t *array_to_heap(int *array, size_t size);
-int heap_extract(heap_t **root);
-int *heap_to_sorted_array(heap_t *heap, size_t *size);
+binarytreet *binary_trees_ancestor(const binarytreet *first,
+				     const binarytreet *second);
+void binary_tree_levelorder(const binarytreet *tree, void (*func)(int));
+int binary_tree_is_complete(const binarytreet *tree);
+binarytreet *binary_tree_rotate_l(binarytreet *tree);
+binarytreet *binary_tree_rotate_r(binarytreet *tree);
+int binary_tree_is_bst(const binarytreet *tree);
+bstt *bst_insert(bstt **tree, int value);
+bstt *array_to_bst(int *array, size_t size);
+bstt *bst_search(const bstt *tree, int value);
+bstt *bst_remove(bstt *root, int value);
+int binary_tree_is_avl(const binarytreet *tree);
+avlt *avl_insert(avlt **tree, int value);
+avlt *array_to_avl(int *array, size_t size);
+avlt *avl_remove(avlt *root, int value);
+avlt *sorted_array_to_avl(int *array, size_t size);
+int binary_tree_is_heap(const binarytreet *tree);
+heapt *heap_insert(heapt **root, int value);
+heapt *array_to_heap(int *array, size_t size);
+int heap_extract(heapt **root);
+int *heapto_sorted_array(heapt *heap, size_t *size);
 
 /* helper functions */
 int _pow_recursion(int x, int y);
-binary_tree_t *bta_helper(binary_tree_t *root, const binary_tree_t *first,
-			  const binary_tree_t *second);
-void btlo_helper(const binary_tree_t *tree, void (*func)(int), size_t level);
-int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
-int btib_helper(const binary_tree_t *tree, int low, int hi);
-bst_t *bst_min_val(bst_t *root);
-int btia_helper(const binary_tree_t *tree, int low, int hi);
-int btih_helper(const binary_tree_t *tree);
-void sata_helper(avl_t **root, int *array, size_t lo, size_t hi);
+binarytreet *bta_helper(binarytreet *root, const binarytreet *first,
+			  const binarytreet *second);
+void btlo_helper(const binarytreet *tree, void (*func)(int), size_t level);
+int btic_helper(const binarytreet *tree, size_t index, size_t size);
+int btib_helper(const binarytreet *tree, int low, int hi);
+bstt *bst_min_val(bstt *root);
+int btia_helper(const binarytreet *tree, int low, int hi);
+int btih_helper(const binarytreet *tree);
+void sata_helper(avlt **root, int *array, size_t lo, size_t hi);
 
 #endif

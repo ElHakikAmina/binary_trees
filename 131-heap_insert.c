@@ -9,9 +9,9 @@
  * @b: second node
  * Return: pointer to root
  */
-bst_t *swap(bst_t *a, bst_t *b)
+bstt *swap(bstt *a, bstt *b)
 {
-	bst_t a_copy = INIT_NODE;
+	bstt a_copy = INIT_NODE;
 
 	a_copy.n = a->n;
 	a_copy.prnt = a->prnt;
@@ -83,7 +83,7 @@ char *convert(unsigned long int num, int base, int lowercase)
  * @tree: input binary tree
  * Return: number of descendant child nodes
  */
-size_t binarytreeize(const binary_tree_t *tree)
+size_t binarytreeize(const binarytreet *tree)
 {
 	if (!tree)
 		return (0);
@@ -96,9 +96,9 @@ size_t binarytreeize(const binary_tree_t *tree)
  * @root: double pointer to root of max heap
  * @node: node to insert
  */
-void insert(heap_t **root, heap_t *node)
+void insert(heapt **root, heapt *node)
 {
-	heap_t *tmp;
+	heapt *tmp;
 	int size;
 	unsigned int i;
 	char *binary;
@@ -139,13 +139,13 @@ void insert(heap_t **root, heap_t *node)
  * @value: input value
  * Return: pointer to the created node, or NULL on failure
  */
-heap_t *heap_insert(heap_t **root, int value)
+heapt *heap_insert(heapt **root, int value)
 {
-	heap_t *ht = NULL, *ret;
+	heapt *ht = NULL, *ret;
 
 	if (!root)
 		return (NULL);
-	ht = calloc(1, sizeof(heap_t));
+	ht = calloc(1, sizeof(heapt));
 	ht->n = value;
 	if (!*root)
 	{

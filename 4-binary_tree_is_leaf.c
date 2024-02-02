@@ -8,7 +8,7 @@
  *         0 if not a leaf
  *         0 if node is NULL
  */
-int binary_tree_is_leaf(const binary_tree_t *node)
+int binary_tree_is_leaf(const binarytreet *node)
 {
 	return ((!node || node->l || node->r) ? 0 : 1);
 }

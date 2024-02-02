@@ -7,11 +7,11 @@
  * Return: A pointer to the created node
  *         NULL on failure
  */
-bst_t *bst_insert(bst_t **tree, int value)
+bstt *bst_insert(bstt **tree, int value)
 {
-	bst_t *tmp = *tree;
-	bst_t *second = NULL;
-	bst_t *new = binary_tree_node(NULL, value);
+	bstt *tmp = *tree;
+	bstt *second = NULL;
+	bstt *new = binary_tree_node(NULL, value);
 
 	if (*tree == NULL)
 		*tree = new;
@@ -51,10 +51,10 @@ bst_t *bst_insert(bst_t **tree, int value)
  * Return: a pointer to the created node
  *         NULL on failure
  */
-avl_t *avl_insert(avl_t **tree, int value)
+avlt *avl_insert(avlt **tree, int value)
 {
 	int balance = 0;
-	avl_t *node = bst_insert(tree, value);
+	avlt *node = bst_insert(tree, value);
 
 	balance = binary_tree_balance(*tree);
 

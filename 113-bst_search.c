@@ -8,9 +8,9 @@
  *         NULL if tree is NULL
  *         NULL if no match is found
  */
-bst_t *bst_search(const bst_t *tree, int value)
+bstt *bst_search(const bstt *tree, int value)
 {
-	bst_t *node = (bst_t *)tree;
+	bstt *node = (bstt *)tree;
 
 	if (!tree)
 		return (NULL);

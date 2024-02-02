@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-    avl_t *root;
-    avl_t *node;
+    avlt *root;
+    avlt *node;
 
     root = NULL;
     node = avl_insert(&root, 98);

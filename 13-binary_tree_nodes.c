@@ -7,7 +7,7 @@
  * Return: number of nodes counted
  *         0 if tree is NULL
  */
-size_t binary_tree_nodes(const binary_tree_t *tree)
+size_t binary_tree_nodes(const binarytreet *tree)
 {
 	if (!tree || (!tree->l && !tree->r))
 		return (0);
@@ -22,7 +22,7 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
  * Return: size of the tree
  *         0 if tree is NULL
  */
-size_t binarytreeize(const binary_tree_t *tree)
+size_t binarytreeize(const binarytreet *tree)
 {
 	if (!tree)
 		return (0);
@@ -37,7 +37,7 @@ size_t binarytreeize(const binary_tree_t *tree)
  * Return: number of leaves
  *         0 if tree is NULL
  */
-size_t binary_tree_leaves(const binary_tree_t *tree)
+size_t binary_tree_leaves(const binarytreet *tree)
 {
 	if (!tree)
 		return (0);

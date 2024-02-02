@@ -7,11 +7,11 @@
  * Return: A pointer to the created node
  *         NULL on failure
  */
-bst_t *bst_insert(bst_t **tree, int value)
+bstt *bst_insert(bstt **tree, int value)
 {
-	bst_t *tmp = NULL;
-	bst_t *second = NULL;
-	bst_t *new = NULL;
+	bstt *tmp = NULL;
+	bstt *second = NULL;
+	bstt *new = NULL;
 
 	if (!tree)
 		return (NULL);

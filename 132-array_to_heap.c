@@ -7,10 +7,10 @@
  * Return: pointer to the root node of the created Binary Heap,
  * or NULL on failure
  */
-heap_t *array_to_heap(int *array, size_t size)
+heapt *array_to_heap(int *array, size_t size)
 {
 	size_t i = 0;
-	bst_t *root = NULL;
+	bstt *root = NULL;
 
 	if (!array)
 		return (NULL);

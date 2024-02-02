@@ -8,9 +8,9 @@
  * Return: a pointer to the root node of the created AVL tree
  *         NULL on failure
  */
-avl_t *sorted_array_to_avl(int *array, size_t size)
+avlt *sorted_array_to_avl(int *array, size_t size)
 {
-	avl_t *tree = NULL;
+	avlt *tree = NULL;
 	size_t middle;
 
 	if (!array)
@@ -31,9 +31,9 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
  * @lo: lower bound index
  * @hi: upper bound index
  */
-void sata_helper(avl_t **root, int *array, size_t lo, size_t hi)
+void sata_helper(avlt **root, int *array, size_t lo, size_t hi)
 {
-	avl_t *new = NULL;
+	avlt *new = NULL;
 	size_t middle;
 
 	if (hi - lo > 1)
