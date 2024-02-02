@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
  * binary_tree_nodes - func returns nodes tree children
- * @tree: tree to check
- * Return: number of nodes with children
+ * @tree: tree that will check
+ * Return: nodes number and children
  */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
