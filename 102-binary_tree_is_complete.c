@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * newnd - Function that creates a newnd in a linked_list
+ * newnd - Funct creates a newnd in a linkedlist
  * @node: Type pointer of node to be created
  * Return: the node created
  */
@@ -96,14 +96,14 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 		}
 		else
 			flag = 1;
-		if (head->node->roght != NULL)
+		if (head->node->right != NULL)
 		{
 			if (flag == 1)
 			{
 				free_q(head);
 				return (0);
 			}
-			_push(head->node->roght, head, &tail);
+			_push(head->node->right, head, &tail);
 		}
 		else
 			flag = 1;
