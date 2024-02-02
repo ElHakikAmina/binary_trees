@@ -81,8 +81,8 @@ int remove_type(bst_t *root)
 /**
  * bst_remove - funct remove a node from a BST tree
  * @root: root of the tree
- * @value: node with this value to remove
- * Return: the tree changed
+ * @value: node with value to remove
+ * Return: the changed tree
  */
 bst_t *bst_remove(bst_t *root, int value)
 {
