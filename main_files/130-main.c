@@ -13,8 +13,8 @@ binary_tree_t *basic_tree(void)
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 90);
-    root->roght = binary_tree_node(root, 85);
-    root->left->roght = binary_tree_node(root->left, 80);
+    root->right = binary_tree_node(root, 85);
+    root->left->right = binary_tree_node(root->left, 80);
     root->left->left = binary_tree_node(root->left, 79);
     return (root);
 }
@@ -37,13 +37,13 @@ int main(void)
     heap = binary_tree_is_heap(root->left);
     printf("Is %d heap: %d\n", root->left->n, heap);
 
-    root->roght->left = binary_tree_node(root->roght, 97);
+    root->right->left = binary_tree_node(root->right, 97);
     binary_tree_print(root);
     heap = binary_tree_is_heap(root);
     printf("Is %d heap: %d\n", root->n, heap);
 
     root = basic_tree();
-    root->roght->roght = binary_tree_node(root->roght, 79);
+    root->right->right = binary_tree_node(root->right, 79);
     binary_tree_print(root);
     heap = binary_tree_is_heap(root);
     printf("Is %d heap: %d\n", root->n, heap);

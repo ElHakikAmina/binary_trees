@@ -14,9 +14,9 @@ int main(void)
 
   root = binary_tree_node(NULL, 98);
   root->left = binary_tree_node(root, 12);
-  root->roght = binary_tree_node(root, 128);
-  root->left->roght = binary_tree_node(root->left, 54);
-  root->roght->roght = binary_tree_node(root, 402);
+  root->right = binary_tree_node(root, 128);
+  root->left->right = binary_tree_node(root->left, 54);
+  root->right->right = binary_tree_node(root, 402);
   root->left->left = binary_tree_node(root->left, 10);
 
   binary_tree_print(root);
@@ -25,7 +25,7 @@ int main(void)
   bst = binary_tree_is_bst(root->left);
   printf("Is %d bst: %d\n", root->left->n, bst);
 
-  root->roght->left = binary_tree_node(root->roght, 97);
+  root->right->left = binary_tree_node(root->right, 97);
   binary_tree_print(root);
   bst = binary_tree_is_bst(root);
   printf("Is %d bst: %d\n", root->n, bst);

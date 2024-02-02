@@ -14,22 +14,22 @@ int main(void)
 
 	root = binary_tree_node(NULL, 98);
 	root->left = binary_tree_node(root, 12);
-	root->roght = binary_tree_node(root, 402);
-	binary_tree_insert_roght(root->left, 54);
-	binary_tree_insert_roght(root, 128);
+	root->right = binary_tree_node(root, 402);
+	binary_tree_insert_right(root->left, 54);
+	binary_tree_insert_right(root, 128);
 	root->left->left = binary_tree_node(root->left, 10);
-	root->roght->left = binary_tree_node(root->roght, 10);
+	root->right->left = binary_tree_node(root->right, 10);
 
 	binary_tree_print(root);
 	perfect = binary_tree_is_perfect(root);
 	printf("Perfect: %d\n\n", perfect);
 
-	root->roght->roght->left = binary_tree_node(root->roght->roght, 10);
+	root->right->right->left = binary_tree_node(root->right->right, 10);
 	binary_tree_print(root);
 	perfect = binary_tree_is_perfect(root);
 	printf("Perfect: %d\n\n", perfect);
 
-	root->roght->roght->roght = binary_tree_node(root->roght->roght, 10);
+	root->right->right->right = binary_tree_node(root->right->right, 10);
 	binary_tree_print(root);
 	perfect = binary_tree_is_perfect(root);
 	printf("Perfect: %d\n", perfect);

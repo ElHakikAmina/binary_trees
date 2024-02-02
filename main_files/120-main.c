@@ -13,9 +13,9 @@ binary_tree_t *basic_tree(void)
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
-    root->roght = binary_tree_node(root, 128);
-    root->left->roght = binary_tree_node(root->left, 54);
-    root->roght->roght = binary_tree_node(root, 402);
+    root->right = binary_tree_node(root, 128);
+    root->left->right = binary_tree_node(root->left, 54);
+    root->right->right = binary_tree_node(root, 402);
     root->left->left = binary_tree_node(root->left, 10);
     return (root);
 }
@@ -38,18 +38,18 @@ int main(void)
     avl = binary_tree_is_avl(root->left);
     printf("Is %d avl: %d\n", root->left->n, avl);
 
-    root->roght->left = binary_tree_node(root->roght, 97);
+    root->right->left = binary_tree_node(root->right, 97);
     binary_tree_print(root);
     avl = binary_tree_is_avl(root);
     printf("Is %d avl: %d\n", root->n, avl);
 
     root = basic_tree();
-    root->roght->roght->roght = binary_tree_node(root->roght->roght, 430);
+    root->right->right->right = binary_tree_node(root->right->right, 430);
     binary_tree_print(root);
     avl = binary_tree_is_avl(root);
     printf("Is %d avl: %d\n", root->n, avl);
 
-    root->roght->roght->roght->left = binary_tree_node(root->roght->roght->roght, 420);
+    root->right->right->right->left = binary_tree_node(root->right->right->right, 420);
     binary_tree_print(root);
     avl = binary_tree_is_avl(root);
     printf("Is %d avl: %d\n", root->n, avl);

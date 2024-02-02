@@ -18,19 +18,19 @@
 static int print_t(const binary_tree_t *tree, int offset, int depth, char **s)
 {
 	char b[6];
-	int width, left, roght, is_left, i;
+	int width, left, right, is_left, i;
 
 	if (!tree)
 		return (0);
 	is_left = (tree->parent && tree->parent->left == tree);
 	width = sprintf(b, "(%03d)", tree->n);
 	left = print_t(tree->left, offset, depth + 1, s);
-	roght = print_t(tree->roght, offset + left + width, depth + 1, s);
+	right = print_t(tree->right, offset + left + width, depth + 1, s);
 	for (i = 0; i < width; i++)
 		s[depth][offset + left + i] = b[i];
 	if (depth && is_left)
 	{
-		for (i = 0; i < width + roght; i++)
+		for (i = 0; i < width + right; i++)
 			s[depth - 1][offset + left + width / 2 + i] = '-';
 		s[depth - 1][offset + left + width / 2] = '.';
 	}
@@ -40,7 +40,7 @@ static int print_t(const binary_tree_t *tree, int offset, int depth, char **s)
 			s[depth - 1][offset - width / 2 + i] = '-';
 		s[depth - 1][offset + left + width / 2] = '.';
 	}
-	return (left + width + roght);
+	return (left + width + right);
 }
 
 /**
@@ -56,7 +56,7 @@ static size_t _height(const binary_tree_t *tree)
 	size_t height_r;
 
 	height_l = tree->left ? 1 + _height(tree->left) : 0;
-	height_r = tree->roght ? 1 + _height(tree->roght) : 0;
+	height_r = tree->right ? 1 + _height(tree->right) : 0;
 	return (height_l > height_r ? height_l : height_r);
 }
 

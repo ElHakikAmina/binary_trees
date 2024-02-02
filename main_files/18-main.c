@@ -14,19 +14,19 @@ int main(void)
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
-    root->roght = binary_tree_node(root, 128);
-    root->left->roght = binary_tree_node(root->left, 54);
-    root->roght->roght = binary_tree_node(root->roght, 402);
+    root->right = binary_tree_node(root, 128);
+    root->left->right = binary_tree_node(root->left, 54);
+    root->right->right = binary_tree_node(root->right, 402);
     root->left->left = binary_tree_node(root->left, 10);
-    root->roght->left = binary_tree_node(root->roght, 110);
-    root->roght->roght->left = binary_tree_node(root->roght->roght, 200);
-    root->roght->roght->roght = binary_tree_node(root->roght->roght, 512);
+    root->right->left = binary_tree_node(root->right, 110);
+    root->right->right->left = binary_tree_node(root->right->right, 200);
+    root->right->right->right = binary_tree_node(root->right->right, 512);
 
     binary_tree_print(root);
-    uncle = binary_tree_uncle(root->roght->left);
-    printf("Uncle of %d: %d\n", root->roght->left->n, uncle->n);
-    uncle = binary_tree_uncle(root->left->roght);
-    printf("Uncle of %d: %d\n", root->left->roght->n, uncle->n);
+    uncle = binary_tree_uncle(root->right->left);
+    printf("Uncle of %d: %d\n", root->right->left->n, uncle->n);
+    uncle = binary_tree_uncle(root->left->right);
+    printf("Uncle of %d: %d\n", root->left->right->n, uncle->n);
     uncle = binary_tree_uncle(root->left);
     printf("Uncle of %d: %p\n", root->left->n, (void *)uncle);
     return (0);

@@ -4,7 +4,7 @@
  * r_insert_node - node value instertion in a AVL.
  * @tree: type **pointer of root node of the AVL tree struct.
  * @parent: parent node of struct AVL.
- * @new: type**pointer left or roght insertion.
+ * @new: type**pointer left or right insertion.
  * @nval: insertion value of the AVL.
  * Return: pointer to the new root after insertion otherwise NULL
  */
@@ -22,8 +22,8 @@ avl_t *r_insert_node(avl_t **tree, avl_t *parent, avl_t **new, int nval)
 	}
 	else if ((*tree)->n < nval)
 	{
-		(*tree)->roght = r_insert_node(&(*tree)->roght, *tree, new, nval);
-		if ((*tree)->roght == NULL)
+		(*tree)->right = r_insert_node(&(*tree)->right, *tree, new, nval);
+		if ((*tree)->right == NULL)
 			return (NULL);
 	}
 	else
@@ -33,20 +33,20 @@ avl_t *r_insert_node(avl_t **tree, avl_t *parent, avl_t **new, int nval)
 	bval = binary_tree_balance(*tree);
 	if (bval > 1 && (*tree)->left->n > nval)
 	{
-		*tree = binary_tree_rotate_roght(*tree);
+		*tree = binary_tree_rotate_right(*tree);
 	}
 	else if (bval > 1 && (*tree)->left->n < nval)
 	{
 		(*tree)->left = binary_tree_rotate_left((*tree)->left);
-		*tree = binary_tree_rotate_roght(*tree);
+		*tree = binary_tree_rotate_right(*tree);
 	}
-	else if (bval < -1 && (*tree)->roght->n < nval)
+	else if (bval < -1 && (*tree)->right->n < nval)
 	{
 		*tree = binary_tree_rotate_left(*tree);
 	}
-	else if (bval < -1 && (*tree)->roght->n > nval)
+	else if (bval < -1 && (*tree)->right->n > nval)
 	{
-		(*tree)->roght = binary_tree_rotate_roght((*tree)->roght);
+		(*tree)->right = binary_tree_rotate_right((*tree)->right);
 		*tree = binary_tree_rotate_left(*tree);
 	}
 	return (*tree);

@@ -34,12 +34,12 @@ bst_t *bst_insert(bst_t **tree, int value)
 		}
 		else if (value > temp->n)
 		{
-			if (temp->roght)
-				new = bst_insert(&temp->roght, value);
+			if (temp->right)
+				new = bst_insert(&temp->right, value);
 			else
 			{
 				aux = binary_tree_node((binary_tree_t *)temp, value);
-				new = temp->roght = aux;
+				new = temp->right = aux;
 			}
 		}
 		else

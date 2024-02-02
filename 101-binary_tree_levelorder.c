@@ -18,7 +18,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		if (tree)
 		{
 			l = tree->left ? 1 + binary_tree_height(tree->left) : 0;
-			r = tree->roght ? 1 + binary_tree_height(tree->roght) : 0;
+			r = tree->right ? 1 + binary_tree_height(tree->right) : 0;
 		}
 		return ((l > r) ? l : r);
 	}
@@ -82,7 +82,7 @@ void recursion(link_t **head, const binary_tree_t *tree)
 		level = binary_tree_depth(tree);
 		linked_node(head, tree, level);
 		recursion(head, tree->left);
-		recursion(head, tree->roght);
+		recursion(head, tree->right);
 	}
 }
 /**
