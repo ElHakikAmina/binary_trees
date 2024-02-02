@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_insert_r - inserts a node as the r-child of another node
+ * binarytreeinsertinright - inserts a node as the r-child of another node
  * @prnt: pointer to the node to insert the r-child in
  * @value: value to store in the new node
  *
@@ -9,7 +9,7 @@
  *         NULL on failure
  *         NULL if prnt is NULL
  */
-binarytreet *binary_tree_insert_r(binarytreet *prnt, int value)
+binarytreet *binarytreeinsertinright(binarytreet *prnt, int value)
 {
 	binarytreet *new;
 

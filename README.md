@@ -22,21 +22,21 @@ using the flags -Wall -Werror -Wextra and -pedantic
 ## Table of contents
 Files | Description
 ----- | -----------
-[0-binary_tree_node.c](./0-binary_tree_node.c) | C function that creates a binary tree node
-[1-binary_tree_insert_l.c](./1-binary_tree_insert_l.c) | C function that inserts a node as the l-child of another node
-[2-binary_tree_insert_r.c](./2-binary_tree_insert_r.c) | C function that inserts a node as the r-child of another node
-[3-binary_tree_delete.c](./3-binary_tree_delete.c) | C function that deletes an entire binary tree
-[4-binary_tree_is_leaf.c](./4-binary_tree_is_leaf.c) | C function that checks if a node is a leaf
-[5-binary_tree_is_root.c](./5-binary_tree_is_root.c) | C function that checks if a given node is a root
-[6-binary_tree_preorder.c](./6-binary_tree_preorder.c) | C function that goes through a binary tree using pre-order traversal
-[7-binary_tree_inorder.c](./7-binary_tree_inorder.c) | C function that goes through a binary tree using in-order traversal
-[8-binary_tree_postorder.c](./8-binary_tree_postorder.c) | C function that goes through a binary tree using post-order traversal
+[0-binarytreende.c](./0-binarytreende.c) | C function that creates a binary tree node
+[1-binarytreeinsertinleft.c](./1-binarytreeinsertinleft.c) | C function that inserts a node as the l-child of another node
+[2-binarytreeinsertinright.c](./2-binarytreeinsertinright.c) | C function that inserts a node as the r-child of another node
+[3-binarytreedelete.c](./3-binarytreedelete.c) | C function that deletes an entire binary tree
+[4-binarytreeisleaf.c](./4-binarytreeisleaf.c) | C function that checks if a node is a leaf
+[5-binarytreeroot.c](./5-binarytreeroot.c) | C function that checks if a given node is a root
+[6-binarytreepre_order.c](./6-binarytreepre_order.c) | C function that goes through a binary tree using pre-order traversal
+[7-binarytreein_order.c](./7-binarytreein_order.c) | C function that goes through a binary tree using in-order traversal
+[8-binarytreepositiontorder.c](./8-binarytreepositiontorder.c) | C function that goes through a binary tree using post-order traversal
 [9-binary_tree_height.c](./9-binary_tree_height.c) | C function that measures the height of a binary tree
 [10-binary_tree_depth.c](./10-binary_tree_depth.c) | C function that measures the depth of a node in a binary tree
 [11-binarytreeize.c](./11-binarytreeize.c) | C function that measures the size of a binary tree
 [12-binary_tree_leaves.c](./12-binary_tree_leaves.c) | C function that counts the leaves in a binary tree
-[13-binary_tree_nodes.c](./13-binary_tree_nodes.c) | C function that counts the nodes with at least 1 child in a binary tree
-[14-binary_tree_balance.c](./14-binary_tree_balance.c) | C function that measures the balance factor of a binary tree
+[13-binarytreendes.c](./13-binarytreendes.c) | C function that counts the nodes with at least 1 child in a binary tree
+[14-binarytreeblnce.c](./14-binarytreeblnce.c) | C function that measures the balance factor of a binary tree
 [15-binary_tree_is_full.c](./15-binary_tree_is_full.c) | C function that checks if a binary tree is full
 [16-binary_tree_is_perfect.c](./16-binary_tree_is_perfect.c) | C function that checks if a binary tree is perfect
 [17-binarytreeibling.c](./17-binarytreeibling.c) | C function that finds the sibling of a node

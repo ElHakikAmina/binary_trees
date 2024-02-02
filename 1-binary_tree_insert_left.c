@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_insert_l - inserts a node as the l-child of another node
+ * binarytreeinsertinleft - inserts a node as the l-child of another node
  * @prnt: pointer to the node to insert the l-child in
  * @value: value to store in the new node
  *
@@ -9,7 +9,7 @@
  *         NULL on failure
  *         NULL if prnt is NULL
  */
-binarytreet *binary_tree_insert_l(binarytreet *prnt, int value)
+binarytreet *binarytreeinsertinleft(binarytreet *prnt, int value)
 {
 	binarytreet *new;
 

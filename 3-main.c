@@ -11,12 +11,12 @@ int main(void)
 {
     binarytreet *root;
 
-    root = binary_tree_node(NULL, 98);
-    root->l = binary_tree_node(root, 12);
-    root->r = binary_tree_node(root, 402);
-    binary_tree_insert_r(root->l, 54);
-    binary_tree_insert_r(root, 128);
-    binary_tree_print(root);
-    binary_tree_delete(root);
+    root = binarytreende(NULL, 98);
+    root->l = binarytreende(root, 12);
+    root->r = binarytreende(root, 402);
+    binarytreeinsertinright(root->l, 54);
+    binarytreeinsertinright(root, 128);
+    binarytreeprint(root);
+    binarytreedelete(root);
     return (0);
 }

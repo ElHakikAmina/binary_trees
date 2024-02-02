@@ -18,6 +18,6 @@ int main(void)
     tree = array_to_heap(array, n);
     if (!tree)
         return (1);
-    binary_tree_print(tree);
+    binarytreeprint(tree);
     return (0);
 }

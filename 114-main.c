@@ -19,19 +19,19 @@ int main(void)
     tree = array_to_bst(array, n);
     if (!tree)
         return (1);
-    binary_tree_print(tree);
+    binarytreeprint(tree);
 
     tree = bst_remove(tree, 79);
     printf("Removed 79...\n");
-    binary_tree_print(tree);
+    binarytreeprint(tree);
 
     tree = bst_remove(tree, 21);
     printf("Removed 21...\n");
-    binary_tree_print(tree);
+    binarytreeprint(tree);
 
     tree = bst_remove(tree, 68);
     printf("Removed 68...\n");
-    binary_tree_print(tree);
-    binary_tree_delete(tree);
+    binarytreeprint(tree);
+    binarytreedelete(tree);
     return (0);
 }

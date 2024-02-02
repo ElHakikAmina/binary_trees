@@ -16,7 +16,7 @@ bstt *bst_insert(bstt **tree, int value)
 	if (!tree)
 		return (NULL);
 	if (*tree == NULL)
-		return (*tree = binary_tree_node(NULL, value));
+		return (*tree = binarytreende(NULL, value));
 
 	tmp = *tree;
 	while (tmp)
@@ -30,7 +30,7 @@ bstt *bst_insert(bstt **tree, int value)
 			return (NULL);
 	}
 
-	new = binary_tree_node(NULL, value);
+	new = binarytreende(NULL, value);
 	if (second == NULL)
 		second = new;
 	else if (value < second->n)

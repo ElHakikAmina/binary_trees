@@ -43,7 +43,7 @@ int main(void)
     tree = array_to_heap(array, n);
     if (!tree)
         return (1);
-    binary_tree_print(tree);
+    binarytreeprint(tree);
     sorted = heapto_sorted_array(tree, &sorted_size);
     print_array(sorted, sorted_size);
     free(sorted);

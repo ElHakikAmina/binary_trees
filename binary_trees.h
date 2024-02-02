@@ -31,25 +31,25 @@ typedef struct binarytree bstt;
 typedef struct binarytree avlt;
 typedef struct binarytree heapt;
 
-/* binary_tree_print.c */
-void binary_tree_print(const binarytreet *);
+/* binarytreeprint.c */
+void binarytreeprint(const binarytreet *);
 
 /* tasks */
-binarytreet *binary_tree_node(binarytreet *prnt, int value);
-binarytreet *binary_tree_insert_l(binarytreet *prnt, int value);
-binarytreet *binary_tree_insert_r(binarytreet *prnt, int value);
-void binary_tree_delete(binarytreet *tree);
-int binary_tree_is_leaf(const binarytreet *node);
-int binary_tree_is_root(const binarytreet *node);
-void binary_tree_preorder(const binarytreet *tree, void (*func)(int));
-void binary_tree_inorder(const binarytreet *tree, void (*func)(int));
-void binary_tree_postorder(const binarytreet *tree, void (*func)(int));
+binarytreet *binarytreende(binarytreet *prnt, int value);
+binarytreet *binarytreeinsertinleft(binarytreet *prnt, int value);
+binarytreet *binarytreeinsertinright(binarytreet *prnt, int value);
+void binarytreedelete(binarytreet *tree);
+int binarytreeisleaf(const binarytreet *node);
+int binarytreeroot(const binarytreet *node);
+void binarytreepre_order(const binarytreet *tree, void (*func)(int));
+void binarytreein_order(const binarytreet *tree, void (*func)(int));
+void binarytreepositiontorder(const binarytreet *tree, void (*func)(int));
 size_t binary_tree_height(const binarytreet *tree);
 size_t binary_tree_depth(const binarytreet *tree);
 size_t binarytreeize(const binarytreet *tree);
 size_t binary_tree_leaves(const binarytreet *tree);
-size_t binary_tree_nodes(const binarytreet *tree);
-int binary_tree_balance(const binarytreet *tree);
+size_t binarytreendes(const binarytreet *tree);
+int binarytreeblnce(const binarytreet *tree);
 int binary_tree_is_full(const binarytreet *tree);
 int binary_tree_is_perfect(const binarytreet *tree);
 binarytreet *binarytreeibling(binarytreet *node);

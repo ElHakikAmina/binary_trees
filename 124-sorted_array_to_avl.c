@@ -16,7 +16,7 @@ avlt *sorted_array_to_avl(int *array, size_t size)
 	if (!array)
 		return (NULL);
 	middle = (size - 1) / 2;
-	tree = binary_tree_node(NULL, array[middle]);
+	tree = binarytreende(NULL, array[middle]);
 
 	sata_helper(&tree, array, -1, middle);
 	sata_helper(&tree, array, middle, size);
@@ -39,7 +39,7 @@ void sata_helper(avlt **root, int *array, size_t lo, size_t hi)
 	if (hi - lo > 1)
 	{
 		middle = (hi - lo) / 2 + lo;
-		new = binary_tree_node(*root, array[middle]);
+		new = binarytreende(*root, array[middle]);
 		if (array[middle] > (*root)->n)
 			(*root)->r = new;
 		else if (array[middle] < (*root)->n)

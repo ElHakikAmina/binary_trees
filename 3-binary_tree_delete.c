@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_delete - deletes an entire binary tree
+ * binarytreedelete - deletes an entire binary tree
  * @tree: tree to delete
  */
-void binary_tree_delete(binarytreet *tree)
+void binarytreedelete(binarytreet *tree)
 {
 	if (tree == NULL)
 	{
@@ -14,8 +14,8 @@ void binary_tree_delete(binarytreet *tree)
 	{
 		if (tree != NULL)
 		{
-			binary_tree_delete(tree->l);
-			binary_tree_delete(tree->r);
+			binarytreedelete(tree->l);
+			binarytreedelete(tree->r);
 		}
 		free(tree);
 	}
