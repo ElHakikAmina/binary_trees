@@ -4,7 +4,7 @@
  * if it exists it move down one level and add the new node first
  * @parent: specified node parent
  * @value: node value
- * Return: new node or NULL if it fails 
+ * Return: NULL if it fails or new node
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
