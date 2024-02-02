@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * binary_trees_ancestor - function that checks an ancestor
- * @first: First node
- * @second: Second node
- * Return: the node of the ancestor
+ * binary_trees_ancestor - func checks an ancestor
+ * @first: Contains first node 1
+ * @second: Contains Second node 2
+ * Return: Return the node
  */
 
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
