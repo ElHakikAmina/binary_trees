@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 /**
- * new_node - Function that creates a new_node in a linked_list
+ * newnode - Function that creates a newnode in a linked_list
  * @node: Type pointer of node to be created
  * Return: the node created
  */
-link_t *new_node(binary_tree_t *node)
+link_t *newnode(binary_tree_t *node)
 {
 	link_t *new;
 
@@ -43,7 +43,7 @@ void _push(binary_tree_t *node, link_t *head, link_t **tail)
 {
 	link_t *new;
 
-	new = new_node(node);
+	new = newnode(node);
 	if (new == NULL)
 	{
 		free_q(head);
@@ -78,7 +78,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	{
 		return (0);
 	}
-	head = tail = new_node((binary_tree_t *)tree);
+	head = tail = newnode((binary_tree_t *)tree);
 	if (head == NULL)
 	{
 		exit(1);
