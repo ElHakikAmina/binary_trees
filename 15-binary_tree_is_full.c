@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 /**
  * binary_tree_is_full - func says if tree is full or no
- * a tree is full if it has tow or none children
+ * tree is full so it has tow or none children
  * @tree: tree that will check
  * Return: full is 1 if not 0
  */
