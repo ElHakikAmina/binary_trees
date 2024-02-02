@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * successor - get the next successor i mean the min node in the right subtree
+ * successor - Funct get the next successor i mean the min node
  * @node: tree to check
  * Return: the min value of this tree
  */
@@ -24,7 +24,7 @@ int successor(bst_t *node)
 
 }
 /**
- * two_children - function that gets the next successor using the min
+ * two_children - funct that gets the next successor using the min
  * value in the right subtree, and then replace the node value for
  * this successor
  * @root: node tat has two children
@@ -39,7 +39,7 @@ int two_children(bst_t *root)
 	return (new_value);
 }
 /**
- *remove_type - function that removes a node depending of its children
+ *remove_type - funct that removes a node depending of its children
  *@root: node to remove
  *Return: 0 if it has no children or other value if it has
  */
@@ -79,7 +79,7 @@ int remove_type(bst_t *root)
 		return (two_children(root));
 }
 /**
- * bst_remove - remove a node from a BST tree
+ * bst_remove - funct remove a node from a BST tree
  * @root: root of the tree
  * @value: node with this value to remove
  * Return: the tree changed
