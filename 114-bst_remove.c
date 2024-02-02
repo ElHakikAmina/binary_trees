@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
- * successor - get thenext success i the min mean  node in subtree the right
- * @node: tree that will check
- * Return: returns the min value 
+ * successor - get the next successor i mean the min node in the right subtree
+ * @node: tree to check
+ * Return: the min value of this tree
  */
 int successor(bst_t *node)
 {
