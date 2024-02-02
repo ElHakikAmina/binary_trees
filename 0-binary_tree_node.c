@@ -4,7 +4,7 @@
  * binary_tree_node - function that Create a binary node
  * @parent: represnet node parent
  * @value: contains node Value 
- * Return: new node
+ * Return: the new node
  */
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
