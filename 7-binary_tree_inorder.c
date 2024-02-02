@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 /**
- * binary_tree_inorder - print elements of tree using in-order traversal
- * @tree: tree to go through
- * @func: function to use
- * Return: Nothing
+ * binary_tree_inorder - print tree elements with in-order traversal
+ * @tree: go through
+ * @func: to use
+ * Return: None
  */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
