@@ -2,8 +2,8 @@
 
 /**
  * binary_tree_node - function that Create a binary node
- * @parent: represnet node parent
- * @value: contains node Value 
+ * @parent: node parent
+ * @value: Value of the node
  * Return: the new node
  */
 
