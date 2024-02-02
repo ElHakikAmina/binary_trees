@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
- * bst_insert - insert nodes in order to create a BST tree
- * @tree: tree to create with type BST
- * @value: value of node to insert
+ * bst_insert - insert order nodes in  to a BST create tree
+ * @tree: tree to create type with BST
+ * @value: node to value of insert
  * Return: BST tree
  */
 bst_t *bst_insert(bst_t **tree, int value)
