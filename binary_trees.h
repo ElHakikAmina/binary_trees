@@ -30,7 +30,7 @@ typedef struct binary_tree_s heap_t;
 /**
  * struct link_s - structure for advanced tasks
  *
- * @n: depth of node specified
+ * @n: depth ofnode specified
  * @node: node of tree to store
  * @next: next node of the linked list
  */
